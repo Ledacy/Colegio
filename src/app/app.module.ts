@@ -70,16 +70,17 @@ import { HeaderPagesComponent } from './header-pages.component';
 import { DatePipe } from '@angular/common';
 import { MonedaFormatoPipe } from './monedaFormato.pipe';
 import { StoreFirstGuard } from './storeFirst.guard';
-import { HomeWebComponent } from './Web/home.component';
 import { FooterWebComponent } from './Web/footer.component';
 import { HeaderWebComponent } from './Web/header.component';
+import { HomeWebComponent } from './Web/home.component';
+import { NosotrosWebComponent } from './Web/nosotros.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
     AppComponent, HeaderPagesComponent, HeaderComponent, HabitacionesComponent, TotalSeleccionHabPipe, TotalHabitacionesPipe, TotalHuepedesHabPipe, MonedaFormatoPipe,
-    CheckOutComponent, ProcessDialogComponent, DetalleOrdenComponent, DisponibilidadDialogComponent, HomeWebComponent, FooterWebComponent, HeaderWebComponent,
+    CheckOutComponent, ProcessDialogComponent, DetalleOrdenComponent, DisponibilidadDialogComponent, FooterWebComponent, HeaderWebComponent, HomeWebComponent, NosotrosWebComponent,
   ],
   imports: [
     BrowserModule,
@@ -105,11 +106,13 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
       }
     }),
     RouterModule.forRoot([
-      { path: "home", component: HomeWebComponent },      
+      { path: "home", component: HomeWebComponent },   
+      { path: "nosotros", component: NosotrosWebComponent },   
       { path: "booking/:checkIn/:checkOut/:nroPersonas", component: HabitacionesComponent }, 
       { path: "checkout", component: CheckOutComponent, canActivate: [StoreFirstGuard] },
       { path: "orden-detail", component: DetalleOrdenComponent, canActivate: [StoreFirstGuard] },
-      { path: "**", redirectTo: "/home" }
+      { path: "**", redirectTo: "/home" },
+      { path: "nosotros", component: NosotrosWebComponent },
       ], {useHash: true}),
     NgbModule      
   ],
