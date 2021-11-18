@@ -74,6 +74,10 @@ import { FooterWebComponent } from './Web/footer.component';
 import { HeaderWebComponent } from './Web/header.component';
 import { HomeWebComponent } from './Web/home.component';
 import { NosotrosWebComponent } from './Web/nosotros.component';
+import { CebaWebComponent } from './Web/ceba.component';
+import { PronoeWebComponent } from './Web/pronoe.component';
+import { HorarioWebComponent } from './Web/horario.component';
+import { ContactoWebComponent } from './Web/contacto.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 
@@ -81,6 +85,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
   declarations: [
     AppComponent, HeaderPagesComponent, HeaderComponent, HabitacionesComponent, TotalSeleccionHabPipe, TotalHabitacionesPipe, TotalHuepedesHabPipe, MonedaFormatoPipe,
     CheckOutComponent, ProcessDialogComponent, DetalleOrdenComponent, DisponibilidadDialogComponent, FooterWebComponent, HeaderWebComponent, HomeWebComponent, NosotrosWebComponent,
+    CebaWebComponent, PronoeWebComponent, HorarioWebComponent, ContactoWebComponent,
   ],
   imports: [
     BrowserModule,
@@ -107,12 +112,16 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     }),
     RouterModule.forRoot([
       { path: "home", component: HomeWebComponent },   
-      { path: "nosotros", component: NosotrosWebComponent },   
+      { path: "nosotros", component: NosotrosWebComponent },
+      { path: "ceba", component: CebaWebComponent },
+      { path: "pronoe", component: PronoeWebComponent },
+      { path: "horario", component: HorarioWebComponent },
+      { path: "contacto", component: ContactoWebComponent },
       { path: "booking/:checkIn/:checkOut/:nroPersonas", component: HabitacionesComponent }, 
       { path: "checkout", component: CheckOutComponent, canActivate: [StoreFirstGuard] },
       { path: "orden-detail", component: DetalleOrdenComponent, canActivate: [StoreFirstGuard] },
       { path: "**", redirectTo: "/home" },
-      { path: "nosotros", component: NosotrosWebComponent },
+      { path: "ceba", component: CebaWebComponent },
       ], {useHash: true}),
     NgbModule      
   ],

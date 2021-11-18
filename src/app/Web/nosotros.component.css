@@ -31,8 +31,23 @@
     background-color: #66ebb3;
     background-size: cover;
   }
+/* tarjeta de texto */
+.blockquote-custom {
+  position: relative;
+  font-size: 1.1rem;
+}
 
-  
+.blockquote-custom-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -25px;
+  left: 50px;
+}
   /* estilos de tarjetas */
   .cotainer-1 {
     margin: 0;
@@ -69,15 +84,15 @@
 }
 
 .box .card-1:nth-child(1) .icon {
-    background: #e07768;
+    background: #B5AF87;
 }
 
 .box .card-1:nth-child(2) .icon {
-    background: #6eadd4;
+    background: #BAA841;
 }
 
 .box .card-1:nth-child(3) .icon {
-    background: #4aada9;
+    background: #718FC8;
 }
 
 .box .card-1 .icon .fa {
@@ -90,7 +105,7 @@
     color: #fff;
 }
 
-i {
+.ico {
     position: absolute;
     top: 50%;
     left: 50%;

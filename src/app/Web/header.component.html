@@ -18,14 +18,20 @@
             <li class="nav-item">
               <a class="nav-link color-1 fw-bold"  routerLink="/nosotros">Nosotros</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link color-1 fw-bold" href="#">Certificacion</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle color-1 fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Certificacion
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item color-1 fw-bold" routerLink="/ceba">C.E.B.A</a></li>
+                <li><a class="dropdown-item color-1 fw-bold" routerLink="/pronoe">Pronoe</a></li>
+              </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link color-1 fw-bold" href="#">Horarios</a>
+              <a class="nav-link color-1 fw-bold" routerLink="/horario">Horarios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link color-1 fw-bold" href="#">Contacto</a>
+              <a class="nav-link color-1 fw-bold" routerLink="/contacto">Contacto</a>
             </li>
           </ul>
           <button type="button" class="btn btn-primary me-3">
